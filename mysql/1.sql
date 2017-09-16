@@ -18,23 +18,24 @@ USE `shop`;
 
 -- Dumping structure for table shop.products
 CREATE TABLE IF NOT EXISTS `products` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(60) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `Price` decimal(6,0) NOT NULL,
-  `Amount` decimal(6,0) NOT NULL,
-  `Description` text CHARACTER SET utf8 COLLATE utf8_bin,
-  UNIQUE KEY `ID` (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(60) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `price` float NOT NULL,
+  `amount` int(11) NOT NULL,
+  `weight` float NOT NULL,
+  `descr` text NOT NULL,
+  UNIQUE KEY `ID` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
--- Dumping data for table shop.products: 5 rows
+-- Dumping data for table shop.products: 6 rows
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-REPLACE INTO `products` (`Id`, `Name`, `Price`, `Amount`, `Description`) VALUES
-	(1, 'Dviratis', 300, 5, 'Su dviem ratais'),
-	(2, 'Laikrodis', 150, 12, 'Rolex'),
-	(3, 'Valtis', 200, 8, 'Guminė'),
-	(4, 'Televizorius', 600, 4, 'Samsung'),
-	(5, 'Radijas', 75, 14, 'veikiantis'),
-	(6, 'Telefonas', 400, 18, 'kažkoks');
+REPLACE INTO `products` (`id`, `name`, `price`, `amount`, `weight`, `descr`) VALUES
+	(1, 'Dviratis', 300, 5, 0, '0'),
+	(2, 'Laikrodis', 150, 12, 0, '0'),
+	(3, 'Valtis', 200, 8, 0, '0'),
+	(4, 'Televizorius', 600, 4, 0, '0'),
+	(5, 'Radijas', 75, 14, 0, '0'),
+	(6, 'Telefonas', 400, 18, 0, 'asdasdf');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
