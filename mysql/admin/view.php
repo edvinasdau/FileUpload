@@ -22,6 +22,7 @@
 				      <th>weight</th>
 				      <th>descr</th>
 				      <th>color</th>
+				      <th>foto</th>
 				      <th>Delete</th>
 				    </tr>
 				  </thead>
@@ -37,6 +38,7 @@
 							<td>" . $preke['weight'] . "</td>
 							<td>" . $preke['descr'] . "</td>
 							<td>" . $preke['color'] . "</td>
+							<td><img height='50px' src='../images/" . $preke['image'] . "'></td>
 							<td><a class='btn btn-sm btn-danger' href='?delete=". $preke['id']. "'>Delete</a></td></tr>";
 						}
 					?>
@@ -45,10 +47,10 @@
 			</div>			
 			<div class="col">
 				<h2>Pridėti produktą</h2>
-				<form method ="POST">
+				<form method ="POST" enctype="multipart/form-data">
 					<div class="form-group">
     					<label>name</label>
-						<input class="form-control" type="text" name="name">
+						<input required class="form-control" type="text" name="name">
 					</div>
 					<div class="row">
 						<div class="form-group col">
@@ -71,6 +73,11 @@
 					<div class="form-group col">
 	    					<label>description</label>	
 						<input class="form-control" type="text" name="descr">
+					</div>
+						<div class="form-group col">
+	    					<label>Foto</label>	
+						<input class="form-control" type="file" name="image">
+						</div>
 					</div>
 					<button class="btn btn-primary" type="submit" name="submit">Įtraukti</button>
 				</form>

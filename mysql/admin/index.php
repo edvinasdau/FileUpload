@@ -25,7 +25,13 @@ if(isset($_SESSION['user'])){
 
     //ar bandoma pridet irasa
     if(isset($_POST['submit'])){
-    	$sql = "INSERT INTO products (name, price, amount, weight, descr, color) VALUES ('".$_POST['name']."','".$_POST['price']."', '".$_POST['amount']."','".$_POST['weight']."','".$_POST['descr']."','".$_POST['color']."')";
+
+        if(isset($_FILES['image'])){
+            //die("../images" . $_FILES["image"]["name"]);
+            move_uploaded_file($_FILES["image"]["tmp_name"], "../images/" . $_FILES["image"]["name"]);
+        }
+
+    	$sql = "INSERT INTO products (name, price, amount, weight, descr, color, image) VALUES ('".$_POST['name']."','".$_POST['price']."', '".$_POST['amount']."','".$_POST['weight']."','".$_POST['descr']."','".$_POST['color']. "','" . $_FILES["image"]["name"]."')";
 
     	mysqli_query($conn, $sql);
     }
