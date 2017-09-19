@@ -16,7 +16,7 @@ mysqli_set_charset($conn, "utf8");
 
 //ar bandoma pridet irasa
 if(isset($_POST['submit'])){
-	$sql = "INSERT INTO products (Name, Price, Amount) VALUES ('".$_POST['Name']."','".$_POST['Price']."', '".$_POST['Amount']."')";
+	$sql = "INSERT INTO products (name, price, amount, weight, descr, color) VALUES ('".$_POST['name']."','".$_POST['price']."', '".$_POST['amount']."','".$_POST['weight']."','".$_POST['descr']."','".$_POST['color']."')";
 
 	mysqli_query($conn, $sql);
 }
@@ -27,7 +27,7 @@ if(isset($_GET['delete'])){
 
     //$_GET['delete'] reiksme gaunama is nuorodos ?delete
 
-    $sql = "DELETE FROM products WHERE Id = " . $_GET['delete'] ;
+    $sql = "DELETE FROM products WHERE id = " . $_GET['delete'] ;
 
     mysqli_query($conn, $sql);
 

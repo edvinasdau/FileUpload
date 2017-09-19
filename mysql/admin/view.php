@@ -15,9 +15,12 @@
 				  <thead>
 				    <tr>
 				      <th>#</th>
-				      <th>Name</th>
-				      <th>Price</th>
-				      <th>Amount</th>
+				      <th>name</th>
+				      <th>price</th>
+				      <th>amount</th>
+				      <th>weight</th>
+				      <th>descr</th>
+				      <th>color</th>
 				      <th>Delete</th>
 				    </tr>
 				  </thead>
@@ -25,7 +28,15 @@
 
 					<?php
 						foreach ($prekes as $preke) {
-							echo "<tr><td>". $preke['Id'] . "</td><td>" . $preke['Name'] . "</td><td class = 'price'>" . $preke['Price'] . "</td><td>" . $preke['Amount'] . "</td><td><a class='btn btn-sm btn-danger' href='?delete=". $preke['Id']. "'>Delete</a></td></tr>";
+							echo "<tr>
+							<td>". $preke['id'] . "</td>
+							<td>" . $preke['name'] . "</td>
+							<td class = 'price'>" . $preke['price'] . "</td>
+							<td>" . $preke['amount'] . "</td>
+							<td>" . $preke['weight'] . "</td>
+							<td>" . $preke['descr'] . "</td>
+							<td>" . $preke['color'] . "</td>
+							<td><a class='btn btn-sm btn-danger' href='?delete=". $preke['id']. "'>Delete</a></td></tr>";
 						}
 					?>
 					</tbody>
@@ -35,18 +46,30 @@
 				<h2>Pridėti produktą</h2>
 				<form method ="POST">
 					<div class="form-group">
-    					<label>Name</label>
-						<input class="form-control" type="text" name="Name">
+    					<label>name</label>
+						<input class="form-control" type="text" name="name">
 					</div>
 					<div class="row">
 						<div class="form-group col">
-	    					<label>Price</label>
-						<input class="form-control" type="text" name="Price">
+	    					<label>price</label>
+						<input class="form-control" type="text" name="price">
 						</div>
 						<div class="form-group col">
-	    				<label>Amount</label>	
-						<input class="form-control" type="text" name="Amount">
+	    					<label>amount</label>	
+						<input class="form-control" type="text" name="amount">
 						</div>
+						<div class="form-group col">
+	    					<label>weight</label>	
+						<input class="form-control" type="text" name="weight">
+						</div>
+						<div class="form-group col">
+	    					<label>color</label>	
+						<input class="form-control" type="text" name="color">
+						</div>
+					</div>
+					<div class="form-group col">
+	    					<label>description</label>	
+						<input class="form-control" type="text" name="descr">
 					</div>
 					<button class="btn btn-primary" type="submit" name="submit">Įtraukti</button>
 				</form>
