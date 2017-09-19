@@ -13,26 +13,24 @@
 			  <thead>
 			    <tr>
 			      <th>#</th>
-			      <th>Name</th>
-			      <th>Price</th>
-			      <th>Amount</th>
+				      <th>name</th>
+				      <th>price</th>
+				      <th>amount</th>
+				      <th>weight</th>
+				      <th>descr</th>
+				      <th>color</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			
 				<?php
-					foreach ($prekės as $prekė) {
-						echo "<tr><td>". $prekė['Id'] . "</td><td>" . $prekė['Name'] . "</td><td class = 'price'>" . $prekė['Price'] . "</td><td>" . $prekė['Amount'] . "</td></tr>";
-					}
+					foreach ($prekes as $preke) {
+							echo "<tr><td>". $preke['id'] . "</td><td>" . $preke['name'] . "</td><td class = 'price'>" . $preke['price'] . "</td><td>" . $preke['amount'] . "</td><td>" . $preke['weight'] . "</td><td>" . $preke['descr'] . "</td><td>" . $preke['color'] . "</td></tr>";
+						}
 				?>
 				</tbody>
 			</table>
 		</div>
 	</div>
-	<script>
-		$prices = $document.getElementsByClassName('price');
-		//pabaigti!!!
-        
-	</script>
 </body>
 </html>

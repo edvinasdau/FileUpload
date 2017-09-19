@@ -9,6 +9,7 @@
 <body>
 	<div class="container">
 		<h1>Products Admin</h1>
+		<a href="?logout=true">Logout</a>
 		<div class="row">
 			<div class="col">
 				<table class="table">
