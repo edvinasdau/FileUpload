@@ -8,11 +8,11 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="head">
+		<div class="row head">
 			<h1>eSHOP</h1>
 		</div>
 	</div>
-	<div class="container">
+	<div id="cont" class="container">
 		<div class="row">
 			<table class="table">
 			  <thead>
@@ -33,23 +33,9 @@
 							echo "<tr><td>". $preke['id'] . "</td><td>" . $preke['name'] . "</td><td class = 'price'>" . $preke['price'] . "</td><td>" . $preke['amount'] . "</td><td>" . $preke['weight'] . "</td><td>" . $preke['descr'] . "</td><td>" . $preke['color'] . "</td></tr>";
 						}
 				?>
-				
 				</tbody>
 			</table>
-		</div>
-		<div class="container">
-			<div class="row">
-				<?php
-				for ($i=0; $i <= $prekes ; $i++) { 
-					echo "<div class='rem'><div class=>".$preke['name']."</div>
-							<div class='kaina'>" . $preke['price'] . "</div>
-							<div class='apr'>" . $preke['descr'] . "</div>
-					 	</div>";
-				}
-				?>
-			</div>
 		</div>
 	</div>
 </body>
 </html>
-

@@ -8,3 +8,45 @@ th, td {
     width: 15px;
     height: 15px;
 }
+
+body {
+	background-color: yellow;
+}
+
+h1 {
+	font-size: 500%;
+}
+
+.head {
+	background: orange;
+	color: black;
+	text-align: center;
+	padding: 100px;
+}
+
+
+.rem {
+	border: solid blue 3px;
+	float: left;
+	padding bottom: 40px;
+	font-size: 300%;
+	margin: 30px;
+}
+
+.pav {
+	border: solid red 1px;
+	padding: 20px;
+	font-size: 50%;
+}
+
+.kaina {
+	border: solid red 1px;
+	padding: 20px;
+	font-size:50%;
+}
+
+.apr {
+	border: solid red 1px;
+	padding: 20px;
+	font-size: 50%;
+}
