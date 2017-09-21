@@ -40,10 +40,11 @@
 		<div class="container">
 			<div class="row">
 				<?php
-				for ($i=0; $i <= $prekes ; $i++) { 
-					echo "<div class='rem'><div class=>".$preke['name']."</div>
+				foreach ($prekes as $preke) { 
+					echo "<div class='rem'><div>".$preke['name']."</div>
 							<div class='kaina'>" . $preke['price'] . "</div>
 							<div class='apr'>" . $preke['descr'] . "</div>
+							<img height='50px' src='images/" . $preke['image'] . "'>
 					 	</div>";
 				}
 				?>
